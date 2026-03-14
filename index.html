@@ -1,134 +1,255 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-<title>Neha Pawar Portfolio</title>
+<meta charset="UTF-8">
+<title>Neha Pawar | DevOps Portfolio</title>
+
 <style>
 
 body{
-font-family: Arial;
 margin:0;
-background:#f4f4f4;
+font-family:Segoe UI;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
 }
 
 header{
-background:#111;
-color:white;
 text-align:center;
+padding:100px 20px;
+}
+
+header h1{
+font-size:55px;
+margin:0;
+}
+
+.typing{
+font-size:22px;
+color:#00e5ff;
+margin-top:10px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
 padding:40px;
 }
 
-section{
-padding:40px;
+.section{
+margin-bottom:60px;
+}
+
+.card{
 background:white;
-margin:20px;
-border-radius:10px;
+color:black;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
 }
 
 img{
-width:180px;
-border-radius:50%;
+width:170px;
+border-radius:100px;
+margin-top:20px;
+}
+
+.skills span{
+background:#00c6ff;
+padding:8px 15px;
+margin:6px;
+display:inline-block;
+border-radius:20px;
+color:black;
+font-weight:bold;
 }
 
 .project{
 margin-bottom:20px;
 }
 
+a{
+color:#007bff;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Neha Pawar</h1>
-<p>Aspiring DevOps Engineer</p>
-</header>
 
-<section>
-
-<h2>About Me</h2>
+<div class="typing" id="typing"></div>
 
 <img src="photo.jpg">
 
-<p>
-I am an aspiring DevOps Engineer with hands-on experience in AWS,
-Docker, Terraform and CI/CD tools.
-</p>
+<p>Date of Birth: 29/01/2005</p>
 
-<p><b>Date of Birth:</b> 29/01/2005</p>
+</header>
 
-</section>
+<div class="container">
 
-<section>
+<div class="section">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+DevOps Engineer with hands-on experience in AWS cloud infrastructure,
+Docker containerization, Terraform Infrastructure as Code and CI/CD automation.
+I enjoy building scalable cloud architectures and automating deployments.
+
+</div>
+
+</div>
+
+<div class="section">
 
 <h2>Technical Skills</h2>
 
-<ul>
-<li>AWS (EC2, S3, RDS, VPC, CloudWatch)</li>
-<li>Docker</li>
-<li>Terraform</li>
-<li>Jenkins</li>
-<li>Git & GitHub</li>
-<li>Linux</li>
-<li>Python</li>
-</ul>
+<div class="skills">
 
-</section>
+<span>AWS</span> <span>Docker</span> <span>Terraform</span> <span>Jenkins</span> <span>Ansible</span> <span>Kubernetes</span> <span>Linux</span> <span>Python</span> <span>Git</span>
 
-<section>
+</div>
+
+</div>
+
+<div class="section">
 
 <h2>Projects</h2>
 
-<div class="project">
+<div class="card">
+
 <h3>
-<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">
-3-Tier Architecture using Terraform
+<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">
+Docker S3 RDS Data Pipeline
 </a>
 </h3>
+
+Automated data pipeline using Docker containers with AWS S3 and RDS.
+
 </div>
 
-<div class="project">
+<div class="card">
+
+<h3>
+<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">
+Jenkins Log Monitoring Automation
+</a>
+</h3>
+
+Shell automation for monitoring Jenkins logs and detecting failures.
+
+</div>
+
+<div class="card">
+
 <h3>
 <a href="https://github.com/Iamnehapawar/aws-cloudwatch-monitoring-dashboard">
 AWS CloudWatch Monitoring Dashboard
 </a>
 </h3>
+
+CloudWatch monitoring dashboard for EC2 metrics and alerts.
+
 </div>
 
-<div class="project">
+<div class="card">
+
 <h3>
-<a href="https://github.com/Iamnehapawar/dockerized-node-python-apps">
-Node.js Application Deployment using Docker
+<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">
+3 Tier Architecture using Terraform
 </a>
 </h3>
+
+Infrastructure as Code deployment of scalable AWS architecture.
+
 </div>
 
-</section>
+</div>
 
-<section>
+<div class="section">
 
 <h2>Certifications</h2>
 
-<ul>
-<li>AWS Cloud Practitioner Essentials – AWS Skill Builder</li>
-<li>Python Certification – Hope Foundation</li>
-<li>Cyber Security and Ethical Hacking Workshop – WCHS and BCA</li>
-</ul>
+<div class="card">
 
-</section>
+AWS Cloud Practitioner Essentials – AWS Skill Builder
 
-<section>
+</div>
+
+<div class="card">
+
+Python Certification – Hope Foundation
+
+</div>
+
+<div class="card">
+
+Cyber Security and Ethical Hacking Workshop – WCHS and BCA
+
+</div>
+
+</div>
+
+<div class="section">
 
 <h2>Contact</h2>
 
-<p>Email: nehapawar.it11@gmail.com</p>
+<div class="card">
 
-<p>
-<a href="https://github.com/Iamnehapawar">GitHub</a> |
-<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
-</p>
+Email: [nehapawar.it11@gmail.com](mailto:nehapawar.it11@gmail.com) <br><br>
 
-</section>
+<a href="https://github.com/Iamnehapawar">GitHub</a> | <a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Neha Pawar | DevOps Portfolio
+
+</footer>
+
+<script>
+
+const text="DevOps Engineer | AWS | Docker | Terraform | Jenkins";
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,60);
+}
+}
+
+type();
+
+</script>
 
 </body>
 </html>
+
+
