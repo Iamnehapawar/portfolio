@@ -19,18 +19,39 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
 color:white;
+background:#0f172a;
+overflow-x:hidden;
 }
 
-/* HERO */
+/* animated gradient */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:linear-gradient(45deg,#3b82f6,#8b5cf6,#22c55e,#06b6d4);
+background-size:400% 400%;
+animation:bgmove 12s infinite linear;
+z-index:-1;
+opacity:0.15;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* hero */
 
 .hero{
 height:100vh;
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
 }
@@ -39,11 +60,11 @@ padding:20px;
 width:190px;
 height:190px;
 border-radius:50%;
-border:6px solid #3b82f6;
 object-fit:cover;
-object-position:center 25%;
+object-position:center 30%;
+border:5px solid #3b82f6;
 margin-bottom:20px;
-box-shadow:0 0 25px rgba(59,130,246,0.6);
+box-shadow:0 0 30px rgba(59,130,246,0.6);
 }
 
 .hero h1{
@@ -57,18 +78,17 @@ color:#60a5fa;
 height:30px;
 }
 
-/* INFO */
+/* info */
 
 .info{
-margin-top:15px;
 display:flex;
 gap:25px;
+margin-top:15px;
 flex-wrap:wrap;
 justify-content:center;
-opacity:0.9;
 }
 
-/* BUTTONS */
+/* buttons */
 
 .links{
 margin-top:30px;
@@ -77,31 +97,30 @@ margin-top:30px;
 .links a{
 text-decoration:none;
 color:white;
+background:linear-gradient(135deg,#3b82f6,#8b5cf6);
 padding:12px 22px;
 border-radius:30px;
-background:linear-gradient(135deg,#3b82f6,#8b5cf6);
 margin:8px;
 display:inline-block;
 transition:0.3s;
-font-weight:500;
 }
 
 .links a:hover{
-transform:scale(1.08);
+transform:scale(1.1);
 }
 
-/* SECTIONS */
+/* sections */
 
 .section{
 padding:80px 12%;
 }
 
 .section h2{
-font-size:30px;
-margin-bottom:25px;
+font-size:32px;
+margin-bottom:30px;
 }
 
-/* PROJECT CARDS */
+/* project cards */
 
 .projects{
 display:grid;
@@ -110,7 +129,7 @@ gap:30px;
 }
 
 .card{
-background:rgba(255,255,255,0.06);
+background:rgba(255,255,255,0.08);
 padding:25px;
 border-radius:15px;
 backdrop-filter:blur(12px);
@@ -119,7 +138,7 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
 }
 
 .card h3{
@@ -137,12 +156,12 @@ color:#60a5fa;
 text-decoration:none;
 }
 
-/* FOOTER */
+/* footer */
 
 footer{
 text-align:center;
-padding:30px;
-opacity:0.6;
+padding:40px;
+opacity:0.7;
 }
 
 </style>
@@ -177,7 +196,7 @@ opacity:0.6;
 
 <a href="https://medium.com/@nehapawar29005" target="_blank">Medium</a>
 
-<a href="Neha_Pawar_AWS_DevOps_Engineer_Resume.pdf" target="_blank">Download Resume</a>
+<a href="Neha_Pawar_AWS_DevOps_Resume.pdf" target="_blank">Resume</a>
 
 </div>
 
@@ -191,7 +210,7 @@ opacity:0.6;
 <h2>About Me</h2>
 
 <p>
-AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins. Passionate about building scalable and automated cloud solutions.
+AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins. Passionate about building scalable cloud solutions and automating deployments.
 </p>
 
 </section>
@@ -215,7 +234,6 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 </div>
 
-
 <div class="card">
 
 <h3>Jenkins Log Monitoring Automation</h3>
@@ -225,7 +243,6 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 <a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
 
 </div>
-
 
 <div class="card">
 
@@ -240,7 +257,6 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 </div>
 
 </section>
-
 
 <footer>
 
