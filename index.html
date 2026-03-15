@@ -26,7 +26,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* particles background */
+/* particles */
 
 #particles{
 position:fixed;
@@ -45,13 +45,14 @@ padding:120px 20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
 object-fit:cover;
 object-position:center 30%;
 border:5px solid #3b82f6;
 margin-bottom:20px;
+box-shadow:0 0 40px rgba(59,130,246,0.6);
 }
 
 .hero h1{
@@ -95,7 +96,7 @@ transition:0.3s;
 transform:scale(1.08);
 }
 
-/* sections */
+/* section */
 
 .section{
 padding:80px 12%;
@@ -110,7 +111,7 @@ transform:translateY(0);
 }
 
 .section h2{
-font-size:32px;
+font-size:34px;
 margin-bottom:30px;
 color:#60a5fa;
 }
@@ -128,7 +129,14 @@ gap:25px;
 .card{
 background:#0f172a;
 padding:24px;
-border-radius:14px;
+border-radius:16px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(59,130,246,0.5);
 }
 
 .card h3{
@@ -168,15 +176,19 @@ opacity:0.6;
 <h2 id="role"></h2>
 
 <div class="info">
+
 <div>📍 Pune, India</div>
 <div>📅 29 Jan 2005</div>
 <div>✉️ nehapawar.it11@gmail.com</div>
+
 </div>
 
 <div class="links">
+
 <a href="https://github.com/Iamnehapawar">GitHub</a>
 <a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
 <a href="https://medium.com/@nehapawar29005">Medium</a>
+
 </div>
 
 </section>
@@ -258,9 +270,9 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 </div>
 
 <div class="card">
-<h3>Kubernetes Deployment</h3>
-<p>Blue-green deployment using Kubernetes.</p>
-<a href="https://github.com/Iamnehapawar/K8s-Task">View Project</a>
+<h3>Automated Backup & Rotation Script</h3>
+<p>Automated backup and rotation system with Google Drive integration using Linux scripting.</p>
+<a href="https://github.com/Iamnehapawar/automated-backup-rotation-gdrive">View Project</a>
 </div>
 
 </div>
@@ -300,25 +312,20 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <script>
 
-/* particles background */
+/* particles */
 
 tsParticles.load("particles",{
 particles:{
 number:{value:80},
 color:{value:"#3b82f6"},
-links:{
-enable:true,
-distance:150,
-color:"#3b82f6",
-opacity:0.4
-},
+links:{enable:true,distance:150,color:"#3b82f6",opacity:0.4},
 move:{enable:true,speed:1},
 size:{value:2}
 },
 background:{color:"#020617"}
 })
 
-/* typing animation */
+/* typing */
 
 const name="Neha Pawar"
 const role="AWS & DevOps Engineer"
