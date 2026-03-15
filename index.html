@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -25,26 +24,6 @@ color:white;
 overflow-x:hidden;
 }
 
-/* animated gradient */
-
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:linear-gradient(45deg,#2563eb,#7c3aed,#06b6d4,#22c55e);
-background-size:400% 400%;
-animation:bgmove 15s infinite linear;
-opacity:0.08;
-z-index:-1;
-}
-
-@keyframes bgmove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
 /* hero */
 
 .hero{
@@ -53,8 +32,8 @@ padding:120px 20px;
 }
 
 .hero img{
-width:190px;
-height:190px;
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
 object-position:center 30%;
@@ -63,14 +42,14 @@ margin-bottom:20px;
 }
 
 .hero h1{
-font-size:46px;
+font-size:48px;
 margin-bottom:10px;
 }
 
-.typing{
-font-size:22px;
+.hero h2{
 color:#60a5fa;
-height:30px;
+margin-bottom:20px;
+font-weight:400;
 }
 
 .info{
@@ -78,11 +57,11 @@ display:flex;
 justify-content:center;
 gap:25px;
 flex-wrap:wrap;
-margin-top:20px;
 font-size:14px;
+margin-top:15px;
 }
 
-/* buttons */
+/* links */
 
 .links{
 margin-top:25px;
@@ -96,11 +75,6 @@ padding:10px 18px;
 border-radius:25px;
 margin:6px;
 display:inline-block;
-transition:0.3s;
-}
-
-.links a:hover{
-transform:scale(1.08);
 }
 
 /* section */
@@ -137,11 +111,6 @@ gap:25px;
 background:#0f172a;
 padding:24px;
 border-radius:14px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
 }
 
 .card h3{
@@ -170,47 +139,37 @@ opacity:0.6;
 
 <body>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <img src="profile.jpg">
 
-<h1>Neha Pawar</h1>
+<h1 id="name"></h1>
 
-<div class="typing" id="typing"></div>
+<h2 id="role"></h2>
 
 <div class="info">
-
 <div>📍 Pune, India</div>
 <div>📅 29 Jan 2005</div>
 <div>✉️ nehapawar.it11@gmail.com</div>
-
 </div>
 
 <div class="links">
-
 <a href="https://github.com/Iamnehapawar">GitHub</a>
 <a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
 <a href="https://medium.com/@nehapawar29005">Medium</a>
-
 </div>
 
 </section>
-
-<!-- ABOUT -->
 
 <section class="section">
 
 <h2>About Me</h2>
 
 <p>
-AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins. Passionate about building scalable cloud systems and automating deployments.
+AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins.
 </p>
 
 </section>
-
-<!-- SKILLS -->
 
 <section class="section">
 
@@ -225,7 +184,7 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <div class="card">
 <h3>DevOps</h3>
-<p>Docker, Terraform, Jenkins, Ansible</p>
+<p>Docker, Terraform, Jenkins</p>
 </div>
 
 <div class="card">
@@ -241,8 +200,6 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 </div>
 
 </section>
-
-<!-- PROJECTS -->
 
 <section class="section">
 
@@ -270,47 +227,20 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <div class="card">
 <h3>Dockerized WordPress Application</h3>
-<p>Deployed WordPress using Docker containers.</p>
+<p>WordPress deployment using Docker containers.</p>
 <a href="https://github.com/Iamnehapawar/dockerized-wordpress-application">View Project</a>
 </div>
 
 <div class="card">
 <h3>Ansible HTTPD Automation</h3>
-<p>Automated Apache deployment using Ansible roles.</p>
+<p>Apache server automation using Ansible.</p>
 <a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project">View Project</a>
 </div>
 
 <div class="card">
-<h3>Kubernetes Blue-Green Deployment</h3>
-<p>Zero downtime deployment using Kubernetes blue-green strategy.</p>
+<h3>Kubernetes Deployment</h3>
+<p>Blue-green deployment using Kubernetes.</p>
 <a href="https://github.com/Iamnehapawar/K8s-Task">View Project</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-
-<section class="section">
-
-<h2>Certifications</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>AWS Cloud Practitioner Essentials</h3>
-<p>AWS Skill Builder</p>
-</div>
-
-<div class="card">
-<h3>Python Certification</h3>
-<p>Hope Foundation</p>
-</div>
-
-<div class="card">
-<h3>Cyber Security Workshop</h3>
-<p>WCHS and BCA</p>
 </div>
 
 </div>
@@ -325,50 +255,35 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <script>
 
-/* typing animation */
+/* name typing */
 
-const text=[
-"AWS DevOps Engineer",
-"Cloud Infrastructure Automation",
-"Docker | Terraform | CI/CD"
-]
+const name="Neha Pawar"
+const role="AWS & DevOps Engineer"
 
 let i=0
 let j=0
-let current=""
-let isDeleting=false
 
-function type(){
-
-current=text[i]
-
-if(isDeleting){
-j--
-}else{
-j++
-}
-
-document.getElementById("typing").textContent=current.substring(0,j)
-
-if(!isDeleting && j===current.length){
-isDeleting=true
-setTimeout(type,1200)
-return
-}
-
-if(isDeleting && j===0){
-isDeleting=false
+function typeName(){
+if(i<name.length){
+document.getElementById("name").innerHTML+=name.charAt(i)
 i++
-if(i===text.length){i=0}
+setTimeout(typeName,120)
+}else{
+typeRole()
+}
 }
 
-setTimeout(type,isDeleting?50:90)
-
+function typeRole(){
+if(j<role.length){
+document.getElementById("role").innerHTML+=role.charAt(j)
+j++
+setTimeout(typeRole,100)
+}
 }
 
-type()
+typeName()
 
-/* scroll animation */
+/* scroll reveal */
 
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
