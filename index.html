@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Neha Pawar Portfolio</title>
+<title>Neha Pawar | AWS DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -18,135 +19,163 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:#0f172a;
 color:white;
+overflow-x:hidden;
+}
+
+/* animated background */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle at 30% 30%,#3b82f6,transparent),
+radial-gradient(circle at 70% 70%,#8b5cf6,transparent);
+animation:movebg 12s infinite alternate;
+z-index:-1;
+}
+
+@keyframes movebg{
+0%{transform:translate(-10%,-10%)}
+100%{transform:translate(10%,10%)}
 }
 
 /* hero */
 
 .hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:80px 20px;
+padding:20px;
 }
 
 .hero img{
 width:180px;
 height:180px;
 border-radius:50%;
+border:5px solid white;
 object-fit:cover;
 object-position:center 35%;
-border:5px solid white;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:40px;
+font-size:48px;
 margin-bottom:10px;
 }
 
-.hero p{
-font-size:18px;
-opacity:0.9;
+.typing{
+font-size:22px;
+color:#60a5fa;
+height:30px;
 }
 
 /* info */
 
 .info{
+margin-top:15px;
 display:flex;
-justify-content:center;
 gap:25px;
 flex-wrap:wrap;
-margin-top:20px;
-font-size:15px;
+justify-content:center;
+opacity:0.9;
 }
 
 /* buttons */
 
 .links{
-margin-top:25px;
+margin-top:30px;
 }
 
 .links a{
 text-decoration:none;
 color:white;
-background:linear-gradient(135deg,#667eea,#764ba2);
-padding:10px 18px;
+padding:12px 20px;
 border-radius:30px;
+background:linear-gradient(135deg,#3b82f6,#8b5cf6);
 margin:6px;
 display:inline-block;
 transition:0.3s;
 }
 
 .links a:hover{
-transform:scale(1.08);
+transform:scale(1.1);
 }
 
-/* section */
+/* sections */
 
 .section{
-padding:60px 12%;
+padding:80px 12%;
 }
 
 .section h2{
-margin-bottom:25px;
-font-size:28px;
-border-bottom:2px solid rgba(255,255,255,0.2);
-display:inline-block;
-padding-bottom:5px;
+font-size:30px;
+margin-bottom:30px;
 }
 
-/* cards */
+/* project cards */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
 background:rgba(255,255,255,0.08);
-padding:20px;
+padding:25px;
 border-radius:15px;
-backdrop-filter:blur(10px);
-transition:0.3s;
+backdrop-filter:blur(12px);
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-10px);
 }
 
 .card h3{
 margin-bottom:10px;
 }
 
-.card a{
-color:#9ad1ff;
-text-decoration:none;
+.card p{
 font-size:14px;
+opacity:0.9;
+margin-bottom:12px;
+}
+
+.card a{
+color:#60a5fa;
+text-decoration:none;
 }
 
 /* footer */
 
 footer{
 text-align:center;
-padding:20px;
+padding:30px;
 opacity:0.7;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <!-- HERO -->
 
-<div class="hero">
+<section class="hero">
 
 <img src="profile.jpg">
 
 <h1>Neha Pawar</h1>
 
-<p>AWS & DevOps Engineer</p>
+<div class="typing" id="typing"></div>
 
 <div class="info">
 
@@ -166,25 +195,25 @@ opacity:0.7;
 
 </div>
 
-</div>
+</section>
 
 
 <!-- ABOUT -->
 
-<div class="section">
+<section class="section">
 
 <h2>About Me</h2>
 
 <p>
-AWS & DevOps Engineer with hands-on experience in cloud infrastructure, CI/CD automation, Docker containerization and Infrastructure as Code using Terraform. Passionate about building scalable and automated cloud solutions.
+AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins. Passionate about building scalable and automated cloud solutions.
 </p>
 
-</div>
+</section>
 
 
 <!-- PROJECTS -->
 
-<div class="section">
+<section class="section">
 
 <h2>Projects</h2>
 
@@ -194,9 +223,9 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, CI/CD au
 
 <h3>Docker S3 RDS Data Pipeline</h3>
 
-<p>Automated data pipeline using Docker integrated with AWS S3 and RDS.</p>
+<p>Automated cloud data pipeline using Docker integrated with AWS S3 and RDS.</p>
 
-<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline" target="_blank">View Project</a>
+<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View Project</a>
 
 </div>
 
@@ -205,9 +234,9 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, CI/CD au
 
 <h3>Jenkins Log Monitoring Automation</h3>
 
-<p>Shell script automation system for monitoring Jenkins logs.</p>
+<p>Shell script automation system for monitoring Jenkins logs and alerts.</p>
 
-<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation" target="_blank">View Project</a>
+<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
 
 </div>
 
@@ -216,24 +245,69 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, CI/CD au
 
 <h3>3-Tier Architecture using Terraform</h3>
 
-<p>Deployed AWS infrastructure using Terraform with VPC and EC2 automation.</p>
+<p>Infrastructure automation on AWS using Terraform with scalable architecture.</p>
 
-<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform" target="_blank">View Project</a>
-
-</div>
+<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">View Project</a>
 
 </div>
 
 </div>
 
+</section>
 
-<!-- FOOTER -->
 
 <footer>
 
-© 2026 Neha Pawar | AWS & DevOps Engineer
+© 2026 Neha Pawar | AWS DevOps Engineer
 
 </footer>
+
+
+<script>
+
+/* typing animation */
+
+const text = [
+"AWS DevOps Engineer",
+"Cloud & Infrastructure Automation",
+"CI/CD | Docker | Terraform"
+];
+
+let i=0;
+let j=0;
+let current="";
+let isDeleting=false;
+
+function type(){
+
+current=text[i];
+
+if(isDeleting){
+j--;
+}else{
+j++;
+}
+
+document.getElementById("typing").textContent=current.substring(0,j);
+
+if(!isDeleting && j==current.length){
+isDeleting=true;
+setTimeout(type,1000);
+return;
+}
+
+if(isDeleting && j==0){
+isDeleting=false;
+i++;
+if(i==text.length){i=0}
+}
+
+setTimeout(type,isDeleting?50:100);
+}
+
+type();
+
+</script>
 
 </body>
 </html>
