@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,7 +8,7 @@
 
 <title>Neha Pawar | AWS DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,124 +22,94 @@ font-family:'Poppins',sans-serif;
 body{
 background:#0f172a;
 color:white;
-overflow-x:hidden;
 }
 
-/* animated background */
-
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:linear-gradient(45deg,#3b82f6,#8b5cf6,#06b6d4,#22c55e);
-background-size:400% 400%;
-animation:bgmove 14s infinite linear;
-z-index:-1;
-opacity:0.15;
-}
-
-@keyframes bgmove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
-/* hero */
+/* header */
 
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-padding:20px;
+padding:90px 20px;
 }
 
 .hero img{
-width:190px;
-height:190px;
+width:170px;
+height:170px;
 border-radius:50%;
 object-fit:cover;
-object-position:center 30%;
-border:6px solid #3b82f6;
+object-position:center 35%;
+border:5px solid #3b82f6;
 margin-bottom:20px;
-box-shadow:0 0 30px rgba(59,130,246,0.6);
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
+font-size:42px;
+margin-bottom:8px;
 }
 
-.typing{
-font-size:22px;
+.hero h2{
+font-size:20px;
+font-weight:400;
 color:#60a5fa;
-height:30px;
+margin-bottom:15px;
 }
 
 /* info */
 
 .info{
 display:flex;
-gap:25px;
-margin-top:15px;
-flex-wrap:wrap;
 justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:20px;
+font-size:14px;
 }
 
 /* buttons */
 
-.links{
-margin-top:30px;
-}
-
 .links a{
 text-decoration:none;
 color:white;
-background:linear-gradient(135deg,#3b82f6,#8b5cf6);
-padding:12px 22px;
-border-radius:30px;
-margin:8px;
+padding:10px 18px;
+border-radius:25px;
+background:#3b82f6;
+margin:5px;
 display:inline-block;
 transition:0.3s;
 }
 
 .links a:hover{
-transform:scale(1.1);
+background:#2563eb;
 }
 
 /* sections */
 
 .section{
-padding:80px 12%;
+padding:70px 12%;
 }
 
 .section h2{
-font-size:32px;
-margin-bottom:30px;
+font-size:28px;
+margin-bottom:25px;
+color:#60a5fa;
 }
 
 /* cards */
 
-.projects{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:15px;
-backdrop-filter:blur(12px);
+background:#1e293b;
+padding:20px;
+border-radius:12px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 40px rgba(0,0,0,0.4);
+transform:translateY(-6px);
 }
 
 .card h3{
@@ -156,24 +127,11 @@ color:#60a5fa;
 text-decoration:none;
 }
 
-/* scroll animation */
-
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
 /* footer */
 
 footer{
 text-align:center;
-padding:40px;
+padding:30px;
 opacity:0.7;
 }
 
@@ -191,12 +149,12 @@ opacity:0.7;
 
 <h1>Neha Pawar</h1>
 
-<div class="typing" id="typing"></div>
+<h2>AWS & DevOps Engineer</h2>
 
 <div class="info">
 
 <div>📍 Pune, India</div>
-<div>🗓️ 29 Jan 2005</div>
+<div>📅 29 Jan 2005</div>
 <div>✉️ nehapawar.it11@gmail.com</div>
 
 </div>
@@ -215,9 +173,10 @@ opacity:0.7;
 
 </section>
 
+
 <!-- ABOUT -->
 
-<section class="section fade">
+<section class="section">
 
 <h2>About Me</h2>
 
@@ -227,13 +186,14 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 </section>
 
+
 <!-- SKILLS -->
 
-<section class="section fade">
+<section class="section">
 
 <h2>Skills</h2>
 
-<div class="projects">
+<div class="grid">
 
 <div class="card">
 <h3>AWS</h3>
@@ -259,13 +219,14 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 </section>
 
+
 <!-- PROJECTS -->
 
-<section class="section fade">
+<section class="section">
 
 <h2>Projects</h2>
 
-<div class="projects">
+<div class="grid">
 
 <div class="card">
 
@@ -307,66 +268,7 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 </footer>
 
-<script>
-
-/* typing animation */
-
-const text=[
-"AWS DevOps Engineer",
-"Cloud Infrastructure & Automation",
-"CI/CD | Docker | Terraform"
-];
-
-let i=0;
-let j=0;
-let current="";
-let isDeleting=false;
-
-function type(){
-
-current=text[i];
-
-if(isDeleting){
-j--;
-}else{
-j++;
-}
-
-document.getElementById("typing").textContent=current.substring(0,j);
-
-if(!isDeleting && j==current.length){
-isDeleting=true;
-setTimeout(type,1200);
-return;
-}
-
-if(isDeleting && j==0){
-isDeleting=false;
-i++;
-if(i==text.length){i=0}
-}
-
-setTimeout(type,isDeleting?50:100);
-}
-
-type();
-
-/* scroll animation */
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll(".fade").forEach(el=>{
-observer.observe(el);
-});
-
-</script>
-
 </body>
+
 </html>
 
