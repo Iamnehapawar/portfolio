@@ -19,30 +19,11 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
+background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
 color:white;
-overflow-x:hidden;
 }
 
-/* animated background */
-
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle at 30% 30%,#3b82f6,transparent),
-radial-gradient(circle at 70% 70%,#8b5cf6,transparent);
-animation:movebg 12s infinite alternate;
-z-index:-1;
-}
-
-@keyframes movebg{
-0%{transform:translate(-10%,-10%)}
-100%{transform:translate(10%,10%)}
-}
-
-/* hero */
+/* HERO */
 
 .hero{
 height:100vh;
@@ -55,13 +36,14 @@ padding:20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
-border:5px solid white;
+border:6px solid #3b82f6;
 object-fit:cover;
-object-position:center 35%;
+object-position:center 25%;
 margin-bottom:20px;
+box-shadow:0 0 25px rgba(59,130,246,0.6);
 }
 
 .hero h1{
@@ -75,7 +57,7 @@ color:#60a5fa;
 height:30px;
 }
 
-/* info */
+/* INFO */
 
 .info{
 margin-top:15px;
@@ -86,7 +68,7 @@ justify-content:center;
 opacity:0.9;
 }
 
-/* buttons */
+/* BUTTONS */
 
 .links{
 margin-top:30px;
@@ -95,19 +77,20 @@ margin-top:30px;
 .links a{
 text-decoration:none;
 color:white;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:30px;
 background:linear-gradient(135deg,#3b82f6,#8b5cf6);
-margin:6px;
+margin:8px;
 display:inline-block;
 transition:0.3s;
+font-weight:500;
 }
 
 .links a:hover{
-transform:scale(1.1);
+transform:scale(1.08);
 }
 
-/* sections */
+/* SECTIONS */
 
 .section{
 padding:80px 12%;
@@ -115,10 +98,10 @@ padding:80px 12%;
 
 .section h2{
 font-size:30px;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-/* project cards */
+/* PROJECT CARDS */
 
 .projects{
 display:grid;
@@ -127,15 +110,16 @@ gap:30px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.06);
 padding:25px;
 border-radius:15px;
 backdrop-filter:blur(12px);
-transition:0.4s;
+transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .card h3{
@@ -145,7 +129,7 @@ margin-bottom:10px;
 .card p{
 font-size:14px;
 opacity:0.9;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .card a{
@@ -153,12 +137,12 @@ color:#60a5fa;
 text-decoration:none;
 }
 
-/* footer */
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:30px;
-opacity:0.7;
+opacity:0.6;
 }
 
 </style>
@@ -180,7 +164,7 @@ opacity:0.7;
 <div class="info">
 
 <div>📍 Pune, India</div>
-<div>📅 29 Jan 2005</div>
+<div>🗓️ 29 Jan 2005</div>
 <div>✉️ nehapawar.it11@gmail.com</div>
 
 </div>
@@ -192,6 +176,8 @@ opacity:0.7;
 <a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank">LinkedIn</a>
 
 <a href="https://medium.com/@nehapawar29005" target="_blank">Medium</a>
+
+<a href="Neha_Pawar_AWS_DevOps_Engineer_Resume.pdf" target="_blank">Download Resume</a>
 
 </div>
 
@@ -223,7 +209,7 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 <h3>Docker S3 RDS Data Pipeline</h3>
 
-<p>Automated cloud data pipeline using Docker integrated with AWS S3 and RDS.</p>
+<p>Automated data pipeline using Docker integrated with AWS S3 and RDS.</p>
 
 <a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View Project</a>
 
@@ -234,7 +220,7 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 <h3>Jenkins Log Monitoring Automation</h3>
 
-<p>Shell script automation system for monitoring Jenkins logs and alerts.</p>
+<p>Shell script automation system for monitoring Jenkins logs.</p>
 
 <a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
 
@@ -245,7 +231,7 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 <h3>3-Tier Architecture using Terraform</h3>
 
-<p>Infrastructure automation on AWS using Terraform with scalable architecture.</p>
+<p>Infrastructure automation on AWS using Terraform.</p>
 
 <a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">View Project</a>
 
@@ -267,9 +253,9 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 /* typing animation */
 
-const text = [
+const text=[
 "AWS DevOps Engineer",
-"Cloud & Infrastructure Automation",
+"Cloud Infrastructure & Automation",
 "CI/CD | Docker | Terraform"
 ];
 
@@ -292,7 +278,7 @@ document.getElementById("typing").textContent=current.substring(0,j);
 
 if(!isDeleting && j==current.length){
 isDeleting=true;
-setTimeout(type,1000);
+setTimeout(type,1200);
 return;
 }
 
