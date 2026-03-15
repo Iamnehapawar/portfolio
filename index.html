@@ -20,20 +20,41 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
+background:#020617;
 color:white;
+overflow-x:hidden;
+}
+
+/* animated gradient */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:linear-gradient(45deg,#2563eb,#7c3aed,#06b6d4,#22c55e);
+background-size:400% 400%;
+animation:bgmove 15s infinite linear;
+opacity:0.08;
+z-index:-1;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
 /* hero */
 
 .hero{
 text-align:center;
-padding:110px 20px;
+padding:120px 20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
 object-fit:cover;
 object-position:center 30%;
@@ -42,14 +63,14 @@ margin-bottom:20px;
 }
 
 .hero h1{
-font-size:44px;
+font-size:46px;
 margin-bottom:10px;
 }
 
-.hero h2{
+.typing{
+font-size:22px;
 color:#60a5fa;
-margin-bottom:20px;
-font-weight:400;
+height:30px;
 }
 
 .info{
@@ -57,16 +78,20 @@ display:flex;
 justify-content:center;
 gap:25px;
 flex-wrap:wrap;
-margin-bottom:20px;
+margin-top:20px;
 font-size:14px;
 }
 
-/* links */
+/* buttons */
+
+.links{
+margin-top:25px;
+}
 
 .links a{
 text-decoration:none;
 color:white;
-background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+background:linear-gradient(135deg,#3b82f6,#7c3aed);
 padding:10px 18px;
 border-radius:25px;
 margin:6px;
@@ -93,8 +118,8 @@ transform:translateY(0);
 }
 
 .section h2{
-font-size:30px;
-margin-bottom:25px;
+font-size:32px;
+margin-bottom:30px;
 color:#60a5fa;
 }
 
@@ -106,12 +131,12 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
-/* cards */
+/* card */
 
 .card{
-background:#1e293b;
-padding:22px;
-border-radius:12px;
+background:#0f172a;
+padding:24px;
+border-radius:14px;
 transition:0.3s;
 }
 
@@ -133,12 +158,10 @@ color:#60a5fa;
 text-decoration:none;
 }
 
-/* footer */
-
 footer{
 text-align:center;
 padding:40px;
-opacity:0.7;
+opacity:0.6;
 }
 
 </style>
@@ -155,7 +178,7 @@ opacity:0.7;
 
 <h1>Neha Pawar</h1>
 
-<h2>AWS & DevOps Engineer</h2>
+<div class="typing" id="typing"></div>
 
 <div class="info">
 
@@ -167,9 +190,9 @@ opacity:0.7;
 
 <div class="links">
 
-<a href="https://github.com/Iamnehapawar" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank">LinkedIn</a>
-<a href="https://medium.com/@nehapawar29005" target="_blank">Medium</a>
+<a href="https://github.com/Iamnehapawar">GitHub</a>
+<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
+<a href="https://medium.com/@nehapawar29005">Medium</a>
 
 </div>
 
@@ -182,7 +205,7 @@ opacity:0.7;
 <h2>About Me</h2>
 
 <p>
-AWS & DevOps Engineer with hands-on experience in AWS cloud services, Docker containerization, Terraform infrastructure automation and CI/CD pipelines using Jenkins. Passionate about building scalable and automated cloud systems.
+AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins. Passionate about building scalable cloud systems and automating deployments.
 </p>
 
 </section>
@@ -197,7 +220,7 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud services, Docker con
 
 <div class="card">
 <h3>AWS</h3>
-<p>EC2, S3, RDS, VPC, IAM, CloudWatch</p>
+<p>EC2, S3, RDS, VPC, IAM</p>
 </div>
 
 <div class="card">
@@ -229,13 +252,13 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud services, Docker con
 
 <div class="card">
 <h3>Docker S3 RDS Data Pipeline</h3>
-<p>Automated data pipeline integrating Docker containers with AWS S3 and RDS.</p>
+<p>Automated pipeline integrating Docker with AWS S3 and RDS.</p>
 <a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View Project</a>
 </div>
 
 <div class="card">
 <h3>Jenkins Log Monitoring Automation</h3>
-<p>Shell based automation for monitoring Jenkins logs and detecting failures.</p>
+<p>Automation system for Jenkins log monitoring.</p>
 <a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
 </div>
 
@@ -247,20 +270,20 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud services, Docker con
 
 <div class="card">
 <h3>Dockerized WordPress Application</h3>
-<p>Deployed WordPress using Docker containers and Nginx configuration.</p>
+<p>Deployed WordPress using Docker containers.</p>
 <a href="https://github.com/Iamnehapawar/dockerized-wordpress-application">View Project</a>
 </div>
 
 <div class="card">
-<h3>Ansible HTTPD Role Automation</h3>
-<p>Automated Apache server configuration using Ansible roles.</p>
+<h3>Ansible HTTPD Automation</h3>
+<p>Automated Apache deployment using Ansible roles.</p>
 <a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project">View Project</a>
 </div>
 
 <div class="card">
-<h3>AWS CloudWatch Monitoring Dashboard</h3>
-<p>Created monitoring dashboards for AWS EC2 metrics using CloudWatch.</p>
-<a href="https://github.com/Iamnehapawar/aws-cloudwatch-monitoring-dashboard">View Project</a>
+<h3>Kubernetes Blue-Green Deployment</h3>
+<p>Zero downtime deployment using Kubernetes blue-green strategy.</p>
+<a href="https://github.com/Iamnehapawar/K8s-Task">View Project</a>
 </div>
 
 </div>
@@ -302,6 +325,51 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud services, Docker con
 
 <script>
 
+/* typing animation */
+
+const text=[
+"AWS DevOps Engineer",
+"Cloud Infrastructure Automation",
+"Docker | Terraform | CI/CD"
+]
+
+let i=0
+let j=0
+let current=""
+let isDeleting=false
+
+function type(){
+
+current=text[i]
+
+if(isDeleting){
+j--
+}else{
+j++
+}
+
+document.getElementById("typing").textContent=current.substring(0,j)
+
+if(!isDeleting && j===current.length){
+isDeleting=true
+setTimeout(type,1200)
+return
+}
+
+if(isDeleting && j===0){
+isDeleting=false
+i++
+if(i===text.length){i=0}
+}
+
+setTimeout(type,isDeleting?50:90)
+
+}
+
+type()
+
+/* scroll animation */
+
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -317,6 +385,5 @@ observer.observe(section)
 </script>
 
 </body>
-
 </html>
 
