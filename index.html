@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,7 +7,7 @@
 
 <title>Neha Pawar | AWS DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,17 +19,15 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+background:#0f172a;
 color:white;
-overflow-x:hidden;
 }
 
-/* hero */
+/* HERO */
 
 .hero{
 text-align:center;
-padding:100px 20px;
-animation:fade 1.5s ease;
+padding:110px 20px;
 }
 
 .hero img{
@@ -39,34 +36,31 @@ height:180px;
 border-radius:50%;
 object-fit:cover;
 object-position:center 30%;
-border:5px solid #60a5fa;
+border:5px solid #3b82f6;
 margin-bottom:20px;
-box-shadow:0 0 30px rgba(96,165,250,0.5);
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
 margin-bottom:10px;
 }
 
 .hero h2{
-font-weight:400;
 color:#60a5fa;
 margin-bottom:20px;
+font-weight:400;
 }
-
-/* info */
 
 .info{
 display:flex;
 justify-content:center;
 gap:25px;
 flex-wrap:wrap;
+margin-bottom:20px;
 font-size:14px;
-margin-bottom:25px;
 }
 
-/* buttons */
+/* LINKS */
 
 .links a{
 text-decoration:none;
@@ -83,10 +77,18 @@ transition:0.3s;
 transform:scale(1.08);
 }
 
-/* sections */
+/* SECTIONS */
 
 .section{
 padding:80px 12%;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .section h2{
@@ -95,25 +97,25 @@ margin-bottom:25px;
 color:#60a5fa;
 }
 
-/* cards */
+/* GRID */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
+/* CARDS */
+
 .card{
-background:rgba(255,255,255,0.05);
+background:#1e293b;
 padding:22px;
 border-radius:12px;
 transition:0.3s;
-backdrop-filter:blur(10px);
 }
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .card h3{
@@ -122,7 +124,7 @@ margin-bottom:10px;
 
 .card p{
 font-size:14px;
-opacity:0.9;
+margin-bottom:10px;
 }
 
 .card a{
@@ -130,20 +132,7 @@ color:#60a5fa;
 text-decoration:none;
 }
 
-/* animation */
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* footer */
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -177,11 +166,9 @@ opacity:0.7;
 
 <div class="links">
 
-<a href="https://github.com/Iamnehapawar" target="_blank">GitHub</a>
-
-<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank">LinkedIn</a>
-
-<a href="https://medium.com/@nehapawar29005" target="_blank">Medium</a>
+<a href="https://github.com/Iamnehapawar">GitHub</a>
+<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
+<a href="https://medium.com/@nehapawar29005">Medium</a>
 
 </div>
 
@@ -194,7 +181,7 @@ opacity:0.7;
 <h2>About Me</h2>
 
 <p>
-AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins. Passionate about building scalable cloud systems and automating deployments.
+AWS & DevOps Engineer with hands-on experience in AWS cloud services, Docker containerization, Terraform infrastructure automation and CI/CD pipelines using Jenkins. Passionate about building scalable and automated cloud systems.
 </p>
 
 </section>
@@ -219,7 +206,7 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 <div class="card">
 <h3>CI/CD</h3>
-<p>Automation pipelines & deployment</p>
+<p>Automation pipelines</p>
 </div>
 
 <div class="card">
@@ -240,43 +227,39 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 <div class="grid">
 
 <div class="card">
-
 <h3>Docker S3 RDS Data Pipeline</h3>
-
-<p>Automated data pipeline integrating Docker containers with AWS S3 and RDS.</p>
-
+<p>Automated data pipeline using Docker integrated with AWS S3 and RDS.</p>
 <a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View Project</a>
-
 </div>
 
 <div class="card">
-
 <h3>Jenkins Log Monitoring Automation</h3>
-
-<p>Shell based automation for monitoring Jenkins logs and detecting failures.</p>
-
+<p>Automation system for monitoring Jenkins logs.</p>
 <a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
-
 </div>
 
 <div class="card">
-
-<h3>3 Tier Architecture using Terraform</h3>
-
-<p>Provisioned scalable AWS infrastructure using Terraform.</p>
-
+<h3>3-Tier Architecture using Terraform</h3>
+<p>Infrastructure provisioning on AWS using Terraform.</p>
 <a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">View Project</a>
-
 </div>
 
 <div class="card">
-
 <h3>Dockerized WordPress Application</h3>
-
-<p>Deployed WordPress using Docker containers and Nginx configuration.</p>
-
+<p>Containerized WordPress deployment using Docker and Nginx.</p>
 <a href="https://github.com/Iamnehapawar/dockerized-wordpress-application">View Project</a>
+</div>
 
+<div class="card">
+<h3>Ansible HTTPD Automation</h3>
+<p>Automated Apache HTTP server deployment using Ansible roles.</p>
+<a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project">View Project</a>
+</div>
+
+<div class="card">
+<h3>CloudWatch Monitoring Dashboard</h3>
+<p>Monitoring EC2 metrics using AWS CloudWatch dashboards.</p>
+<a href="https://github.com/Iamnehapawar/aws-cloudwatch-monitoring-dashboard">View Project</a>
 </div>
 
 </div>
@@ -316,7 +299,22 @@ AWS & DevOps Engineer with hands-on experience in cloud infrastructure, Docker c
 
 </footer>
 
-</body>
+<script>
 
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+document.querySelectorAll(".section").forEach(section=>{
+observer.observe(section)
+})
+
+</script>
+
+</body>
 </html>
 
