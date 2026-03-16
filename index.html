@@ -11,6 +11,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <style>
@@ -26,17 +28,6 @@ scroll-behavior:smooth;
 body{
 background:#0f172a;
 color:#e5e7eb;
-}
-
-/* particles */
-
-#particles{
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-z-index:-1;
 }
 
 /* navbar */
@@ -151,7 +142,6 @@ padding:28px;
 border-radius:16px;
 border:1px solid rgba(255,255,255,0.05);
 transition:0.3s;
-backdrop-filter:blur(8px);
 }
 
 .card:hover{
@@ -167,6 +157,47 @@ margin-bottom:10px;
 .card p{
 font-size:14px;
 line-height:1.6;
+}
+
+/* skills icons */
+
+.skill-icon{
+font-size:28px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* project button */
+
+.project-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:linear-gradient(135deg,#38bdf8,#8b5cf6);
+color:white;
+border-radius:20px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.project-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 10px rgba(139,92,246,0.7);
+}
+
+/* tech badges */
+
+.badges{
+margin-top:10px;
+}
+
+.badges span{
+background:#1f2937;
+padding:4px 10px;
+border-radius:12px;
+font-size:12px;
+margin-right:5px;
 }
 
 /* github */
@@ -210,8 +241,6 @@ opacity:0.6;
 
 <body>
 
-<div id="particles"></div>
-
 <nav>
 
 <h3>Neha Pawar</h3>
@@ -241,11 +270,11 @@ Building scalable cloud infrastructure and automating deployments using AWS and 
 
 <div class="links">
 
-<a href="https://github.com/Iamnehapawar" target="_blank">GitHub</a>
+<a href="https://github.com/Iamnehapawar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
 
-<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
 
-<a href="https://medium.com/@nehapawar29005" target="_blank">Medium</a>
+<a href="https://medium.com/@nehapawar29005" target="_blank"><i class="fab fa-medium"></i> Medium</a>
 
 </div>
 
@@ -258,13 +287,7 @@ Building scalable cloud infrastructure and automating deployments using AWS and 
 <div class="card">
 
 <p>
-I am Neha Laxman Pawar, an MCA student specializing in Cloud Architecture and an aspiring AWS Cloud & DevOps Engineer.
-</p>
-
-<br>
-
-<p>
-I have hands-on experience working with AWS services including EC2, S3, RDS, IAM and VPC where I design scalable cloud infrastructure.
+I am Neha Laxman Pawar, an MCA student specializing in Cloud Architecture and an aspiring AWS Cloud & DevOps Engineer with hands-on experience in AWS services including EC2, S3, RDS, IAM and VPC.
 </p>
 
 <br>
@@ -290,21 +313,25 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 <div class="grid">
 
 <div class="card">
+<i class="fas fa-cloud skill-icon"></i>
 <h3>AWS</h3>
 <p>EC2, S3, RDS, IAM, VPC, CloudWatch</p>
 </div>
 
 <div class="card">
-<h3>DevOps</h3>
+<i class="fab fa-docker skill-icon"></i>
+<h3>DevOps Tools</h3>
 <p>Docker, Terraform, Jenkins, Ansible</p>
 </div>
 
 <div class="card">
+<i class="fas fa-sync skill-icon"></i>
 <h3>CI/CD</h3>
 <p>Automation pipelines and deployments</p>
 </div>
 
 <div class="card">
+<i class="fab fa-linux skill-icon"></i>
 <h3>Linux</h3>
 <p>Ubuntu, Amazon Linux, Shell scripting</p>
 </div>
@@ -320,46 +347,50 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 <div class="grid">
 
 <div class="card">
+
 <h3>Docker S3 RDS Data Pipeline</h3>
+
 <p>Automated pipeline integrating Docker containers with AWS S3 and RDS.</p>
+
+<div class="badges">
+<span>AWS</span>
+<span>Docker</span>
+<span>RDS</span>
+</div>
+
+<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline" target="_blank" class="project-btn">View Project</a>
+
 </div>
 
 <div class="card">
-<h3>Jenkins Log Monitoring Automation</h3>
-<p>Automation system for Jenkins log monitoring.</p>
-</div>
 
-<div class="card">
 <h3>3 Tier Architecture using Terraform</h3>
+
 <p>Provisioned scalable AWS infrastructure using Terraform.</p>
+
+<div class="badges">
+<span>AWS</span>
+<span>Terraform</span>
+</div>
+
+<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform" target="_blank" class="project-btn">View Project</a>
+
 </div>
 
 <div class="card">
-<h3>Dockerized WordPress Application</h3>
-<p>Containerized WordPress deployment using Docker.</p>
+
+<h3>Jenkins Log Monitoring Automation</h3>
+
+<p>Automation system for Jenkins log monitoring.</p>
+
+<div class="badges">
+<span>Jenkins</span>
+<span>Linux</span>
 </div>
 
-<div class="card">
-<h3>Ansible HTTPD Automation</h3>
-<p>Apache server automation using Ansible roles.</p>
-</div>
-
-<div class="card">
-<h3>Automated Backup & Rotation Script</h3>
-<p>Automated Linux backup system with Google Drive integration.</p>
-</div>
+<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation" target="_blank" class="project-btn">View Project</a>
 
 </div>
-
-</section>
-
-<section class="section">
-
-<h2>GitHub Activity</h2>
-
-<div class="github">
-
-<img src="https://ghchart.rshah.org/38bdf8/Iamnehapawar">
 
 </div>
 
@@ -371,11 +402,11 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 
 <div class="contact">
 
-<a href="mailto:nehapawar.it11@gmail.com" target="_blank">Email</a>
+<a href="mailto:nehapawar.it11@gmail.com"><i class="fas fa-envelope"></i> Email</a>
 
-<a href="https://github.com/Iamnehapawar" target="_blank">GitHub</a>
+<a href="https://github.com/Iamnehapawar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
 
-<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
 
 </div>
 
@@ -387,22 +418,10 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 
 </footer>
 
-<script>
-
-tsParticles.load("particles",{
-particles:{
-number:{value:60},
-color:{value:"#38bdf8"},
-links:{enable:true,color:"#38bdf8"},
-move:{enable:true,speed:1}
-}
-})
-
-</script>
-
 </body>
 </html>
 ```
+
 
 
 
