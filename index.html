@@ -272,12 +272,12 @@ opacity:0.6;
 
 <img src="profile.jpg">
 
-<h1>Neha Laxman Pawar</h1>
+<h1 id="name"></h1>
 
-<h2>AWS Cloud & DevOps Engineer</h2>
+<h2 id="role"></h2>
 
 <p class="tagline">
-Building scalable cloud infrastructure and automating deployments using AWS and modern DevOps practices.
+AWS • Docker • Terraform • Jenkins • Linux
 </p>
 
 <div class="links">
@@ -299,20 +299,20 @@ Building scalable cloud infrastructure and automating deployments using AWS and 
 <div class="card">
 
 <p>
-I am Neha Laxman Pawar, an MCA student specializing in Cloud Architecture and an aspiring AWS Cloud & DevOps Engineer with hands-on experience in AWS services including EC2, S3, RDS, IAM and VPC.
+I am <strong>Neha Laxman Pawar</strong>, an MCA student specializing in <strong>Cloud Architecture</strong> and an aspiring <strong>AWS Cloud & DevOps Engineer</strong>.
 </p>
 
 <br>
 
-<p>
-My DevOps experience includes Docker containerization, Terraform infrastructure provisioning, CI/CD automation using Jenkins and Linux server management.
-</p>
+<ul style="line-height:1.8">
 
-<br>
+<li>☁️ Building scalable AWS cloud infrastructure</li>
+<li>🐳 Containerization using Docker</li>
+<li>🔁 CI/CD pipelines using Jenkins</li>
+<li>⚡ Infrastructure automation using Terraform</li>
+<li>🐧 Linux administration and shell scripting</li>
 
-<p>
-I enjoy building automation pipelines, solving infrastructure challenges and continuously improving my cloud and DevOps skills.
-</p>
+</ul>
 
 </div>
 
@@ -339,7 +339,7 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 <div class="card">
 <i class="fas fa-sync skill-icon"></i>
 <h3>CI/CD</h3>
-<p>Automation pipelines and deployments</p>
+<p>Automation pipelines</p>
 </div>
 
 <div class="card">
@@ -361,7 +361,7 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 <div class="card">
 <h3>Docker S3 RDS Data Pipeline</h3>
 <p>Automated pipeline integrating Docker containers with AWS S3 and RDS.</p>
-<div class="badges"><span>AWS</span><span>Docker</span><span>RDS</span></div>
+<div class="badges"><span>AWS</span><span>Docker</span></div>
 <a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline" target="_blank" class="project-btn">View Project</a>
 </div>
 
@@ -381,15 +381,15 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 
 <div class="card">
 <h3>Dockerized WordPress Application</h3>
-<p>Containerized WordPress deployment using Docker.</p>
-<div class="badges"><span>Docker</span><span>WordPress</span></div>
+<p>Containerized WordPress deployment.</p>
+<div class="badges"><span>Docker</span></div>
 <a href="https://github.com/Iamnehapawar/dockerized-wordpress-application" target="_blank" class="project-btn">View Project</a>
 </div>
 
 <div class="card">
 <h3>Ansible HTTPD Automation</h3>
 <p>Apache server automation using Ansible roles.</p>
-<div class="badges"><span>Ansible</span><span>Linux</span></div>
+<div class="badges"><span>Ansible</span></div>
 <a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project" target="_blank" class="project-btn">View Project</a>
 </div>
 
@@ -440,13 +440,50 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 
 <script>
 
+/* typing animation */
+
+const name="Neha Laxman Pawar"
+const role="AWS Cloud & DevOps Engineer"
+
+let i=0
+let j=0
+
+function typeName(){
+if(i<name.length){
+document.getElementById("name").innerHTML+=name.charAt(i)
+i++
+setTimeout(typeName,120)
+}else{
+typeRole()
+}
+}
+
+function typeRole(){
+if(j<role.length){
+document.getElementById("role").innerHTML+=role.charAt(j)
+j++
+setTimeout(typeRole,100)
+}
+}
+
+typeName()
+
+/* particles */
+
 tsParticles.load("particles",{
+background:{color:"#0f172a"},
 particles:{
-number:{value:70},
+number:{value:120},
 color:{value:"#38bdf8"},
-links:{enable:true,color:"#38bdf8",opacity:0.3},
-move:{enable:true,speed:1},
-size:{value:2}
+links:{enable:true,color:"#38bdf8",opacity:0.4},
+move:{enable:true,speed:1.5},
+size:{value:3},
+opacity:{value:0.6}
+},
+interactivity:{
+events:{
+onhover:{enable:true,mode:"repulse"}
+}
 }
 })
 
@@ -455,6 +492,7 @@ size:{value:2}
 </body>
 </html>
 ```
+
 
 
 
