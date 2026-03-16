@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,6 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <style>
 
@@ -25,6 +28,17 @@ scroll-behavior:smooth;
 body{
 background:#0f172a;
 color:#e5e7eb;
+}
+
+/* particles */
+
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
 }
 
 /* navbar */
@@ -183,7 +197,7 @@ transform:scale(1.05);
 box-shadow:0 0 10px rgba(139,92,246,0.7);
 }
 
-/* tech badges */
+/* badges */
 
 .badges{
 margin-top:10px;
@@ -238,6 +252,8 @@ opacity:0.6;
 </head>
 
 <body>
+
+<div id="particles"></div>
 
 <nav>
 
@@ -422,9 +438,24 @@ I enjoy building automation pipelines, solving infrastructure challenges and con
 
 </footer>
 
+<script>
+
+tsParticles.load("particles",{
+particles:{
+number:{value:70},
+color:{value:"#38bdf8"},
+links:{enable:true,color:"#38bdf8",opacity:0.3},
+move:{enable:true,speed:1},
+size:{value:2}
+}
+})
+
+</script>
+
 </body>
 </html>
 ```
+
 
 
 
