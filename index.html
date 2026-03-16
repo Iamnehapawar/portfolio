@@ -137,12 +137,20 @@ margin-bottom:30px;
 font-size:34px;
 }
 
-/* grid */
+/* skills grid */
 
-.grid{
+.skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:25px;
+}
+
+@media(max-width:768px){
+
+.skills-grid{
+grid-template-columns:1fr;
+}
+
 }
 
 /* cards */
@@ -173,9 +181,17 @@ line-height:1.6;
 /* skills icons */
 
 .skill-icon{
-font-size:28px;
+font-size:32px;
 color:#38bdf8;
 margin-bottom:10px;
+}
+
+/* projects grid */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 /* project button */
@@ -299,7 +315,7 @@ AWS • Docker • Terraform • Jenkins • Linux
 <div class="card">
 
 <p>
-I am <strong>Neha Laxman Pawar</strong>, an MCA student specializing in <strong>Cloud Architecture</strong> and an aspiring <strong>AWS Cloud & DevOps Engineer</strong>.
+I am <strong>Neha Laxman Pawar</strong>, an MCA student specializing in Cloud Architecture and an aspiring AWS Cloud & DevOps Engineer.
 </p>
 
 <br>
@@ -322,7 +338,7 @@ I am <strong>Neha Laxman Pawar</strong>, an MCA student specializing in <strong>
 
 <h2>Skills</h2>
 
-<div class="grid">
+<div class="skills-grid">
 
 <div class="card">
 <i class="fas fa-cloud skill-icon"></i>
@@ -492,6 +508,7 @@ onhover:{enable:true,mode:"repulse"}
 </body>
 </html>
 ```
+
 
 
 
