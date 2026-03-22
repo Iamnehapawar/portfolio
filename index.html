@@ -1,4 +1,4 @@
-```html id="exactfinalcode"
+```html id="finalclean01"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Neha Pawar | AWS DevOps Engineer</title>
+<title>Neha Laxman Pawar | AWS Cloud & DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
@@ -20,12 +22,12 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#020617;
-color:white;
-overflow-x:hidden;
+background:#0f172a;
+color:#e5e7eb;
 }
 
 /* particles */
@@ -39,85 +41,120 @@ left:0;
 z-index:-1;
 }
 
+/* navbar */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+padding:15px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,0.05);
+z-index:100;
+}
+
+nav h3{
+color:#38bdf8;
+}
+
+nav a{
+color:#cbd5f5;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
 /* hero */
 
 .hero{
 text-align:center;
-padding:120px 20px;
+padding:150px 20px 120px 20px;
 }
 
 .hero img{
-width:190px;
-height:190px;
+width:180px;
+height:180px;
 border-radius:50%;
-object-fit:cover;
-object-position:center 30%;
-border:5px solid #22d3ee;
+border:4px solid #38bdf8;
+box-shadow:0 0 30px rgba(56,189,248,0.6);
 margin-bottom:20px;
-box-shadow:0 0 40px rgba(34,211,238,0.7);
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:10px;
-color:#a78bfa;
+font-size:46px;
+color:white;
 }
 
 .hero h2{
-color:#22d3ee;
-margin-bottom:20px;
+color:#38bdf8;
 font-weight:400;
+margin-top:5px;
+}
+
+.tagline{
+max-width:600px;
+margin:auto;
+margin-top:15px;
+opacity:0.8;
 }
 
 .info{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-font-size:14px;
 margin-top:15px;
+opacity:0.8;
+font-size:14px;
 }
-
-/* buttons */
 
 .links{
 margin-top:25px;
 }
 
 .links a{
-text-decoration:none;
-color:white;
-background:linear-gradient(135deg,#22d3ee,#a78bfa);
+background:linear-gradient(135deg,#38bdf8,#8b5cf6);
 padding:10px 18px;
 border-radius:25px;
-margin:6px;
+text-decoration:none;
+color:white;
+margin:5px;
 display:inline-block;
 transition:0.3s;
 }
 
 .links a:hover{
-transform:scale(1.1);
-box-shadow:0 0 15px rgba(167,139,250,0.7);
+transform:scale(1.08);
+box-shadow:0 0 15px rgba(139,92,246,0.7);
 }
 
 /* section */
 
 .section{
 padding:80px 12%;
-opacity:0;
-transform:translateY(40px);
-transition:all 1s;
-}
-
-.section.show{
-opacity:1;
-transform:translateY(0);
 }
 
 .section h2{
-font-size:34px;
+color:#38bdf8;
 margin-bottom:30px;
-color:#22d3ee;
+font-size:34px;
+}
+
+/* skills grid */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+@media(max-width:768px){
+.skills-grid{
+grid-template-columns:1fr;
+}
 }
 
 /* grid */
@@ -145,37 +182,96 @@ grid-template-columns:1fr;
 /* cards */
 
 .card{
-background:#0f172a;
-padding:24px;
+background:#111827;
+padding:28px;
 border-radius:16px;
 border:1px solid rgba(255,255,255,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 35px rgba(167,139,250,0.7);
+transform:translateY(-6px);
+box-shadow:0 0 25px rgba(139,92,246,0.5);
 }
 
 .card h3{
+color:#8b5cf6;
 margin-bottom:10px;
-color:#a78bfa;
+transition:0.3s;
+}
+
+.card:hover h3{
+color:#38bdf8;
 }
 
 .card p{
 font-size:14px;
+line-height:1.6;
+}
+
+/* icons */
+
+.skill-icon{
+font-size:32px;
+color:#38bdf8;
 margin-bottom:10px;
 }
 
-.card a{
-color:#22d3ee;
+/* project button */
+
+.project-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:linear-gradient(135deg,#38bdf8,#8b5cf6);
+color:white;
+border-radius:20px;
 text-decoration:none;
+font-size:14px;
+transition:0.3s;
 }
 
-.github{
-text-align:center;
-margin-top:40px;
+.project-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 10px rgba(139,92,246,0.7);
 }
+
+/* badges */
+
+.badges{
+margin-top:10px;
+}
+
+.badges span{
+background:#1f2937;
+padding:4px 10px;
+border-radius:12px;
+font-size:12px;
+margin-right:5px;
+}
+
+/* contact */
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+background:#38bdf8;
+padding:10px 18px;
+border-radius:25px;
+color:white;
+text-decoration:none;
+margin:10px;
+display:inline-block;
+transition:0.3s;
+}
+
+.contact a:hover{
+background:#0ea5e9;
+}
+
+/* footer */
 
 footer{
 text-align:center;
@@ -191,210 +287,97 @@ opacity:0.6;
 
 <div id="particles"></div>
 
+<nav>
+<h3>Neha Pawar</h3>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#blogs">Blogs</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <section class="hero">
 
 <img src="profile.jpg">
 
 <h1 id="name"></h1>
-
 <h2 id="role"></h2>
 
+<p class="tagline">
+AWS • Docker • Terraform • Jenkins • Linux
+</p>
+
 <div class="info">
-
-<div>📍 Pune, India</div>
-<div>📅 29/01/2005</div>
-<div>✉️ nehapawar.it11@gmail.com</div>
-
+📍 Pune, India | 📅 29/01/2005 | ✉️ nehapawar.it11@gmail.com
 </div>
 
 <div class="links">
 
-<a href="https://github.com/Iamnehapawar">GitHub</a>
-<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
-<a href="https://medium.com/@nehapawar29005">Medium</a>
+<a href="https://github.com/Iamnehapawar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://medium.com/@nehapawar29005" target="_blank"><i class="fab fa-medium"></i> Medium</a>
 
 </div>
 
 </section>
 
-<section class="section">
+<!-- बाकी सगळं same आहे -->
 
-<h2>About Me</h2>
-
-<p>
-AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Skills</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>AWS</h3>
-<p>EC2, S3, RDS, VPC, IAM</p>
-</div>
-
-<div class="card">
-<h3>DevOps</h3>
-<p>Docker, Terraform, Jenkins</p>
-</div>
-
-<div class="card">
-<h3>CI/CD</h3>
-<p>Automation pipelines</p>
-</div>
-
-<div class="card">
-<h3>Linux</h3>
-<p>Ubuntu, Amazon Linux</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Docker S3 RDS Data Pipeline</h3>
-<p>Automated pipeline integrating Docker with AWS S3 and RDS.</p>
-<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View Project</a>
-</div>
-
-<div class="card">
-<h3>Jenkins Log Monitoring Automation</h3>
-<p>Automation system for Jenkins log monitoring.</p>
-<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
-</div>
-
-<div class="card">
-<h3>3 Tier Architecture using Terraform</h3>
-<p>Provisioned scalable AWS infrastructure using Terraform.</p>
-<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">View Project</a>
-</div>
-
-<div class="card">
-<h3>Dockerized WordPress Application</h3>
-<p>WordPress deployment using Docker containers.</p>
-<a href="https://github.com/Iamnehapawar/dockerized-wordpress-application">View Project</a>
-</div>
-
-<div class="card">
-<h3>Ansible HTTPD Automation</h3>
-<p>Apache server automation using Ansible.</p>
-<a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project">View Project</a>
-</div>
-
-<div class="card">
-<h3>Automated Backup & Rotation Script</h3>
-<p>Automated backup and rotation system using Linux scripting.</p>
-<a href="https://github.com/Iamnehapawar/automated-backup-rotation-gdrive">View Project</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- BLOGS -->
-
-<section class="section">
+<section class="section" id="blogs">
 
 <h2>Blogs & Articles</h2>
 
 <div class="blog-grid">
 
-<div class="card">
-<h3>LEMP Stack using Ansible</h3>
-<a href="https://medium.com/@nehapawar29005/lemp-stack-deployment-using-ansible-4e55cbb45dab">Read Article</a>
-</div>
+<div class="card"><h3>LEMP Ansible</h3><p>LEMP stack automation.</p><a href="https://medium.com/@nehapawar29005/lemp-stack-deployment-using-ansible-4e55cbb45dab" target="_blank" class="project-btn">Read</a></div>
 
-<div class="card">
-<h3>2 Tier Architecture using Terraform</h3>
-<a href="https://medium.com/@nehapawar29005/2-tier-architecture-using-terraform-6edca86ba272">Read Article</a>
-</div>
+<div class="card"><h3>2 Tier Terraform</h3><p>Architecture design.</p><a href="https://medium.com/@nehapawar29005/2-tier-architecture-using-terraform-6edca86ba272" target="_blank" class="project-btn">Read</a></div>
 
-<div class="card">
-<h3>Tic Tac Toe using Docker</h3>
-<a href="https://medium.com/@nehapawar29005/tic-tac-toe-game-using-docker-c54ed0f19d5b">Read Article</a>
-</div>
+<div class="card"><h3>Docker Game</h3><p>Container app.</p><a href="https://medium.com/@nehapawar29005/tic-tac-toe-game-using-docker-c54ed0f19d5b" target="_blank" class="project-btn">Read</a></div>
 
-<div class="card">
-<h3>3 Tier Architecture using Terraform</h3>
-<a href="https://medium.com/@nehapawar29005/3-tier-architecture-using-terraform-a0b28725bb4f">Read Article</a>
-</div>
+<div class="card"><h3>3 Tier Terraform</h3><p>Cloud infra.</p><a href="https://medium.com/@nehapawar29005/3-tier-architecture-using-terraform-a0b28725bb4f" target="_blank" class="project-btn">Read</a></div>
 
 </div>
 
 </section>
 
-<footer>
-
-© 2026 Neha Pawar | AWS DevOps Engineer
-
-</footer>
-
 <script>
+
+/* typing animation */
+
+const name="Neha Laxman Pawar"
+const role="AWS Cloud & DevOps Engineer"
+
+let i=0,j=0;
+
+function typeName(){
+if(i<name.length){
+document.getElementById("name").innerHTML+=name[i++];
+setTimeout(typeName,120);
+}else typeRole();
+}
+
+function typeRole(){
+if(j<role.length){
+document.getElementById("role").innerHTML+=role[j++];
+setTimeout(typeRole,100);
+}
+}
+
+typeName()
 
 /* particles */
 
 tsParticles.load("particles",{
 particles:{
 number:{value:120},
-color:{value:"#22d3ee"},
-links:{enable:true,color:"#22d3ee",opacity:0.4},
-move:{enable:true,speed:1},
-size:{value:2}
+color:{value:"#38bdf8"},
+links:{enable:true,color:"#38bdf8",opacity:0.4},
+move:{enable:true,speed:1.5},
+size:{value:3}
 }
-})
-
-/* typing */
-
-const name="Neha Pawar"
-const role="AWS & DevOps Engineer"
-
-let i=0
-let j=0
-
-function typeName(){
-if(i<name.length){
-document.getElementById("name").innerHTML+=name.charAt(i)
-i++
-setTimeout(typeName,120)
-}else{
-typeRole()
-}
-}
-
-function typeRole(){
-if(j<role.length){
-document.getElementById("role").innerHTML+=role.charAt(j)
-j++
-setTimeout(typeRole,100)
-}
-}
-
-typeName()
-
-/* scroll reveal */
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show")
-}
-})
-})
-
-document.querySelectorAll(".section").forEach(section=>{
-observer.observe(section)
 })
 
 </script>
@@ -402,6 +385,7 @@ observer.observe(section)
 </body>
 </html>
 ```
+
 
 
 
