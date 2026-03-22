@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -32,9 +33,9 @@ overflow-x:hidden;
 position:fixed;
 width:100%;
 height:100%;
-z-index:-1;
 top:0;
 left:0;
+z-index:-1;
 }
 
 /* hero */
@@ -45,42 +46,35 @@ padding:120px 20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
 object-fit:cover;
 object-position:center 30%;
 border:5px solid #22d3ee;
-box-shadow:0 0 40px rgba(34,211,238,0.7);
 margin-bottom:20px;
+box-shadow:0 0 40px rgba(34,211,238,0.7);
 }
 
 .hero h1{
-font-size:48px;
+font-size:50px;
+margin-bottom:10px;
 color:#a78bfa;
 }
 
 .hero h2{
 color:#22d3ee;
-margin:10px 0;
+margin-bottom:20px;
+font-weight:400;
 }
-
-/* info */
 
 .info{
 display:flex;
 justify-content:center;
-gap:15px;
+gap:25px;
 flex-wrap:wrap;
-margin-top:20px;
-}
-
-.info-box{
-background:#0f172a;
-padding:10px 15px;
-border-radius:20px;
 font-size:14px;
-border:1px solid rgba(255,255,255,0.08);
+margin-top:15px;
 }
 
 /* buttons */
@@ -102,6 +96,7 @@ transition:0.3s;
 
 .links a:hover{
 transform:scale(1.1);
+box-shadow:0 0 15px rgba(167,139,250,0.7);
 }
 
 /* section */
@@ -110,7 +105,7 @@ transform:scale(1.1);
 padding:80px 12%;
 opacity:0;
 transform:translateY(40px);
-transition:1s;
+transition:all 1s;
 }
 
 .section.show{
@@ -119,9 +114,9 @@ transform:translateY(0);
 }
 
 .section h2{
+font-size:34px;
+margin-bottom:30px;
 color:#22d3ee;
-margin-bottom:25px;
-font-size:32px;
 }
 
 /* grid */
@@ -136,23 +131,35 @@ gap:25px;
 
 .card{
 background:#0f172a;
-padding:20px;
-border-radius:15px;
+padding:24px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(167,139,250,0.6);
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(167,139,250,0.7);
 }
 
 .card h3{
+margin-bottom:10px;
 color:#a78bfa;
+}
+
+.card p{
+font-size:14px;
+margin-bottom:10px;
 }
 
 .card a{
 color:#22d3ee;
 text-decoration:none;
+}
+
+.github{
+text-align:center;
+margin-top:40px;
 }
 
 footer{
@@ -169,42 +176,41 @@ opacity:0.6;
 
 <div id="particles"></div>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <img src="profile.jpg">
 
 <h1 id="name"></h1>
+
 <h2 id="role"></h2>
 
 <div class="info">
-<div class="info-box">📍 Pune, India</div>
-<div class="info-box">🎂 29 Jan 2005</div>
-<div class="info-box">✉️ nehapawar.it11@gmail.com</div>
+
+<div>📍 Pune, India</div>
+<div>📅 29 Jan 2005</div>
+<div>✉️ nehapawar.it11@gmail.com</div>
+
 </div>
 
 <div class="links">
+
 <a href="https://github.com/Iamnehapawar">GitHub</a>
 <a href="https://www.linkedin.com/in/neha-pawar-3ba4a131b">LinkedIn</a>
 <a href="https://medium.com/@nehapawar29005">Medium</a>
+
 </div>
 
 </section>
-
-<!-- ABOUT -->
 
 <section class="section">
 
 <h2>About Me</h2>
 
 <p>
-AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Docker, Terraform, Jenkins and CI/CD automation. Passionate about building scalable cloud solutions.
+AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Docker containerization, Terraform automation and CI/CD pipelines using Jenkins.
 </p>
 
 </section>
-
-<!-- SKILLS -->
 
 <section class="section">
 
@@ -212,16 +218,29 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <div class="grid">
 
-<div class="card"><h3>AWS</h3><p>EC2, S3, RDS, VPC, IAM</p></div>
-<div class="card"><h3>DevOps</h3><p>Docker, Terraform, Jenkins</p></div>
-<div class="card"><h3>CI/CD</h3><p>Automation pipelines</p></div>
-<div class="card"><h3>Linux</h3><p>Ubuntu, Amazon Linux</p></div>
+<div class="card">
+<h3>AWS</h3>
+<p>EC2, S3, RDS, VPC, IAM</p>
+</div>
+
+<div class="card">
+<h3>DevOps</h3>
+<p>Docker, Terraform, Jenkins</p>
+</div>
+
+<div class="card">
+<h3>CI/CD</h3>
+<p>Automation pipelines</p>
+</div>
+
+<div class="card">
+<h3>Linux</h3>
+<p>Ubuntu, Amazon Linux</p>
+</div>
 
 </div>
 
 </section>
-
-<!-- PROJECTS -->
 
 <section class="section">
 
@@ -231,45 +250,43 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <div class="card">
 <h3>Docker S3 RDS Data Pipeline</h3>
-<p>Docker + AWS S3 & RDS pipeline automation.</p>
-<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View</a>
+<p>Automated pipeline integrating Docker with AWS S3 and RDS.</p>
+<a href="https://github.com/Iamnehapawar/docker-s3-rds-data-pipeline">View Project</a>
 </div>
 
 <div class="card">
-<h3>Jenkins Log Monitoring</h3>
-<p>Automated Jenkins log monitoring system.</p>
-<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View</a>
+<h3>Jenkins Log Monitoring Automation</h3>
+<p>Automation system for Jenkins log monitoring.</p>
+<a href="https://github.com/Iamnehapawar/jenkins-log-monitoring-automation">View Project</a>
 </div>
 
 <div class="card">
-<h3>3 Tier Terraform Architecture</h3>
-<p>Infrastructure provisioning using Terraform.</p>
-<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">View</a>
+<h3>3 Tier Architecture using Terraform</h3>
+<p>Provisioned scalable AWS infrastructure using Terraform.</p>
+<a href="https://github.com/Iamnehapawar/3-tier-architecture_using-Terraform">View Project</a>
 </div>
 
 <div class="card">
-<h3>Docker WordPress</h3>
-<p>Containerized WordPress deployment.</p>
-<a href="https://github.com/Iamnehapawar/dockerized-wordpress-application">View</a>
+<h3>Dockerized WordPress Application</h3>
+<p>WordPress deployment using Docker containers.</p>
+<a href="https://github.com/Iamnehapawar/dockerized-wordpress-application">View Project</a>
 </div>
 
 <div class="card">
 <h3>Ansible HTTPD Automation</h3>
 <p>Apache server automation using Ansible.</p>
-<a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project">View</a>
+<a href="https://github.com/Iamnehapawar/Ansible-HTTPD-Role-Automation-Project">View Project</a>
 </div>
 
 <div class="card">
-<h3>Backup Rotation Script</h3>
-<p>Automated backup & rotation with Google Drive.</p>
-<a href="https://github.com/Iamnehapawar/automated-backup-rotation-gdrive">View</a>
+<h3>Automated Backup & Rotation Script</h3>
+<p>Automated backup and rotation system using Linux scripting.</p>
+<a href="https://github.com/Iamnehapawar/automated-backup-rotation-gdrive">View Project</a>
 </div>
 
 </div>
 
 </section>
-
-<!-- CERTIFICATIONS -->
 
 <section class="section">
 
@@ -277,22 +294,33 @@ AWS & DevOps Engineer with hands-on experience in AWS cloud infrastructure, Dock
 
 <div class="grid">
 
-<div class="card"><h3>AWS Cloud Practitioner</h3><p>AWS Skill Builder</p></div>
-<div class="card"><h3>Python Certification</h3><p>Hope Foundation</p></div>
-<div class="card"><h3>Cyber Security</h3><p>Workshop</p></div>
+<div class="card">
+<h3>AWS Cloud Practitioner Essentials</h3>
+<p>AWS Skill Builder</p>
+</div>
+
+<div class="card">
+<h3>Python Certification</h3>
+<p>Hope Foundation</p>
+</div>
+
+<div class="card">
+<h3>Cyber Security Workshop</h3>
+<p>WCHS and BCA</p>
+</div>
 
 </div>
 
 </section>
 
-<!-- GITHUB -->
-
 <section class="section">
 
 <h2>GitHub Activity</h2>
 
-<div style="text-align:center">
-<img src="https://ghchart.rshah.org/a78bfa/Iamnehapawar">
+<div class="github">
+
+<img src="https://ghchart.rshah.org/a78bfa/Iamnehapawar" alt="github graph">
+
 </div>
 
 </section>
@@ -346,7 +374,7 @@ setTimeout(typeRole,100)
 
 typeName()
 
-/* scroll */
+/* scroll reveal */
 
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -356,7 +384,9 @@ entry.target.classList.add("show")
 })
 })
 
-document.querySelectorAll(".section").forEach(el=>observer.observe(el))
+document.querySelectorAll(".section").forEach(section=>{
+observer.observe(section)
+})
 
 </script>
 
